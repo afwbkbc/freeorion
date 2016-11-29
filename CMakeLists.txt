@@ -162,6 +162,10 @@ find_package(OpenAL REQUIRED)
 find_package(Ogg REQUIRED)
 find_package(Vorbis REQUIRED)
 
+if(APPLE)
+    find_library(CORE_FOUNDATION_LIBRARY CoreFoundation)
+endif()
+
 
 ##
 ## Define main project targets.
@@ -242,6 +246,7 @@ target_link_libraries(freeorioncommon
     ${Boost_SYSTEM_LIBRARY}
     ${Boost_THREAD_LIBRARY}
     ${ZLIB_LIBRARIES}
+    ${CORE_FOUNDATION_LIBRARY}
 )
 
 add_dependencies(freeorioncommon freeorionversion)
