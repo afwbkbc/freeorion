@@ -172,6 +172,10 @@ endif()
 ## Define main project targets.
 ##
 
+execute_process(
+    COMMAND "${PYTHON_EXECUTABLE}" -c "import sys; print(sys.prefix); print(sys.path); print(sys.modules)"
+)
+
 # To run the version generation every compile we need to deferr the
 # execution to a separate target and the existing python command
 add_custom_target(freeorionversion
