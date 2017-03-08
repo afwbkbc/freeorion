@@ -4,7 +4,6 @@ version: ci-{build}
 
 environment:
   matrix:
-    - BUILD_SYSTEM: MSVC
     - BUILD_SYSTEM: CMAKE
 
 init:
