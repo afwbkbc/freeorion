@@ -222,9 +222,10 @@ add_library(freeorioncommon "")
 
 target_compile_options(freeorioncommon
     PRIVATE
-        $<$<CXX_COMPILER_ID:gnu>:-fvisibility=hidden>
-        $<$<CXX_COMPILER_ID:clang>:-fvisibility=hidden>
-        $<$<CXX_COMPILER_ID:clang>:-ftemplate-depth=512>
+        $<$<CXX_COMPILER_ID:GNU>:-fvisibility=hidden>
+        $<$<CXX_COMPILER_ID:Clang>:-fvisibility=hidden>
+        $<$<CXX_COMPILER_ID:Clang>:-ftemplate-depth=512>
+        $<$<CXX_COMPILER_ID:AppleClang>:-ftemplate-depth=512>
 )
 
 if(APPLE)
@@ -280,10 +281,11 @@ set_property(TARGET freeorionparseobj
 
 target_compile_options(
     freeorionparseobj PRIVATE
-    $<$<CXX_COMPILER_ID:gnu>:-fvisibility=hidden>
-    $<$<CXX_COMPILER_ID:clang>:-fvisibility=hidden>
+    $<$<CXX_COMPILER_ID:GNU>:-fvisibility=hidden>
+    $<$<CXX_COMPILER_ID:Clang>:-fvisibility=hidden>
+    $<$<CXX_COMPILER_ID:Clang>:-ftemplate-depth=512>
+    $<$<CXX_COMPILER_ID:AppleClang>:-ftemplate-depth=512>
     $<$<AND:$<NOT:$<BOOL:${BUILD_TESTING}>>,$<CXX_COMPILER_ID:gnu>>:-O3>
-    $<$<CXX_COMPILER_ID:clang>:-ftemplate-depth=512>
 )
 
 target_compile_definitions(freeorionparseobj
