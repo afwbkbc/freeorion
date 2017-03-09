@@ -3,6 +3,10 @@
 
 #if FREEORION_BUILD_PARSE && __GNUC__
 #   define FO_PARSE_API __attribute__((__visibility__("default")))
+#elif FREEORION_BUILD_PARSE && _MSC_VER
+#   define FO_PARSE_API __declspec(dllexport)
+#elif _MSC_VER
+#   define FO_PARSE_API __declspec(dllimport)
 #else
 #   define FO_PARSE_API
 #endif
