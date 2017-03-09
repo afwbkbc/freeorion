@@ -250,38 +250,35 @@ target_link_libraries(freeorioncommon
 add_dependencies(freeorioncommon freeorionversion)
 
 
-add_library(freeorionparseobj OBJECT "")
+add_library(freeorionparse OBJECT "")
 
-target_include_directories(freeorionparseobj SYSTEM
+target_include_directories(freeorionparse SYSTEM
     PRIVATE
         ${Boost_INCLUDE_DIRS}
         ${PROJECT_SOURCE_DIR}/GG
 )
 
-set_property(TARGET freeorionparseobj
+set_property(TARGET freeorionparse
     PROPERTY
     POSITION_INDEPENDENT_CODE ON
 )
 
 target_compile_options(
-    freeorionparseobj PRIVATE
+    freeorionparse PRIVATE
     $<$<CXX_COMPILER_ID:gnu>:-fvisibility=hidden>
     $<$<AND:$<NOT:$<BOOL:${BUILD_TESTING}>>,$<CXX_COMPILER_ID:gnu>>:-O3>
     $<$<CXX_COMPILER_ID:clang>:-ftemplate-depth=512>
 )
 
-target_compile_definitions(freeorionparseobj
+target_compile_definitions(freeorionparse
     PRIVATE
         -DNDEBUG
         -DFREEORION_BUILD_PARSE
 )
 
-
-add_library(freeorionparse $<TARGET_OBJECTS:freeorionparseobj>)
-
-target_compile_options(
-    freeorionparse PRIVATE
-    $<$<CXX_COMPILER_ID:gnu>:-fvisibility=hidden>
+target_sources(freeorioncommon
+    PRIVATE
+        $<TARGET_OBJECTS:freeorionparse>
 )
 
 
@@ -307,7 +304,6 @@ target_include_directories(freeoriond SYSTEM
 
 target_link_libraries(freeoriond
     freeorioncommon
-    freeorionparse
     ${PYTHON_LIBRARIES}
     ${Boost_PYTHON_LIBRARY}
     ${CMAKE_THREAD_LIBS_INIT}
@@ -336,7 +332,6 @@ target_include_directories(freeorionca SYSTEM
 
 target_link_libraries(freeorionca
     freeorioncommon
-    freeorionparse
     ${PYTHON_LIBRARIES}
     ${Boost_PYTHON_LIBRARY}
     ${CMAKE_THREAD_LIBS_INIT}
@@ -378,7 +373,6 @@ endif ()
 
 target_link_libraries(freeorion
     freeorioncommon
-    freeorionparse
     GiGi
     GiGiSDL
     ${OPENGL_gl_LIBRARY}
@@ -419,7 +413,6 @@ add_subdirectory(doc)
 install(
     TARGETS
         freeorioncommon
-        freeorionparse
     LIBRARY DESTINATION ${FreeOrion_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
     COMPONENT COMPONENT_FREEORION
