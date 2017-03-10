@@ -273,7 +273,7 @@ target_compile_options(
 target_compile_definitions(freeorionparse
     PRIVATE
         -DNDEBUG
-        -DFREEORION_BUILD_PARSE
+        -DFREEORION_BUILD_COMMON
 )
 
 target_sources(freeorioncommon
