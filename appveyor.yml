@@ -37,13 +37,12 @@ build_script:
   - if "%BUILD_SYSTEM%" == "CMAKE" (
       pushd build &&
       cmake -DCMAKE_CXX_FLAGS=/MP -G "Visual Studio 14 2015" .. &&
-      cmake --build . --config "Release" -- /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" &&
       popd
     )
 
 after_build:
   - if "%BUILD_SYSTEM%" == "CMAKE" (
-      7z a msvcproj.zip build\*.sln build\*.vcxproj build\*.filter
+      7z a msvcproj.zip build\*.sln build\*.vcxproj build\*.filter build\GG\*.vcxproj build\GG\*.filter
     )
 
 test: off
