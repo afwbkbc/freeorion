@@ -41,4 +41,13 @@ build_script:
       popd
     )
 
+after_build:
+  - if "%BUILD_SYSTEM%" == "CMAKE" (
+      7z a msvcproj.zip build\*.sln build\*.vcxproj build\*.filter
+    )
+
 test: off
+
+artifacts:
+  - name: FreeOrionMSVCProject
+    path: msvcproj.zip
