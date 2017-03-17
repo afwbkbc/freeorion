@@ -54,10 +54,13 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\dev\fo\include\zlib;D:\dev\fo\include\vorbis;D:\dev\fo\include\SDL2;D:\dev\fo\include\python2.7;D:\dev\fo\include\png;D:\dev\fo\include\ogg;D:\dev\fo\include\GL;D:\dev\fo\include\freetype;D:\dev\fo\include\AL;D:\dev\fo\Boost\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>../../</OutDir>
+    <IncludePath>D:\dev\fo\include\zlib;D:\dev\fo\include\vorbis;D:\dev\fo\include\SDL2;D:\dev\fo\include\python2.7;D:\dev\fo\include\png;D:\dev\fo\include\ogg;D:\dev\fo\include\GL;D:\dev\fo\include\freetype;D:\dev\fo\include\AL;D:\dev\fo\Boost\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\dev\fo\Boost\lib;D:\dev\fo\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-XP|Win32'">
     <LinkIncremental>false</LinkIncremental>
