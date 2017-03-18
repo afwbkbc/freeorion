@@ -4920,6 +4920,12 @@ Self-Sustaining Metabolism
 SELF_SUSTAINING_SPECIES_TEXT
 Self-Sustaining species may be energy or crystalline beings or something even stranger. Their commonality is that they need no sustenance, so their max population is very high. While there are no specials that boost their growth, their max population is equal to a species that is provided with all three [[encyclopedia GROWTH_FOCUS_TITLE]] specials.
 
+UNDEAD_SPECIES_TITLE
+Undead Metabolism
+
+UNDEAD_SPECIES_TEXT
+'''Undead species are former organic species that are reanimated with some methods. They do not age and do not have biological needs anymore.'''
+
 TELEPATHIC_TITLE
 Telepathy
 
@@ -6938,6 +6944,31 @@ The Furthest report that their homeworld was once full of the deadliest predator
 
 Reason for Staying:
 The Furthest generally consider space travel far too dangerous for a sane being, but some who consider their homeworld too dangerous may consider relocating to another world.
+'''
+
+SP_NECRI
+Necri
+
+SP_NECRI_GAMEPLAY_DESC
+'''A caste of elite undead warriors, last remnants of once great and prospering civilization. Exist with endless combat training as top and only priority.
+Prefer [[PT_BARREN]] planets.
+[[encyclopedia UNDEAD_SPECIES_TITLE]]
+[[encyclopedia XENOPHOBIC_SPECIES_TITLE]]
+'''
+
+SP_NECRI_DESC
+'''Description:
+Formerly organic species, now they are infused with advanced nanorobotic compound. Necri do not age, do not need to eat, sleep or rest. Their only goals in life is improving combat skills. Their way of life made them unsuitable for any peaceful activity such as research, and their ideology prevents them from even thinking of doing something constructive. They resulted from centuries of intensive military research and rigorous combat training and will strongly oppose to anything that can make them weaker.
+
+Biology:
+Necri are slim, fast, twitchy humanoids with extremely advanced biological and cybernetic augmentation and highest grade weaponry. Their eyes are often replaced with ultra-responsive robotic oculars with direct wiring to arm-mounted weapons, such as rocket launchers, sniper rifles, hand-held plasma weapons or flaks. Some individuals have their fingers or entire hands surgically removed and replaced with warp blades or portable deflector shield generators. Legs are typically altered cybernetically to increase running speed 10 times or more if compared to normal body. Some even have jetpacks mounted to their backs that allow them to fly.
+Necri are free from biological dependencies and rely on nanorobotic blood to stay active infinitely.
+
+Social Structure:
+Necri do not reproduce by biological means. Both because they don't want to and because reproduction organs are typically removed anyway, to add space for something useful, such as portable ammunition generator or high-speed tissue nanofactory. Sometimes Necri create additional warriors artificially, by cloning or by taking ancient dead bodies from cryo chambers and infusing with nanobots that repair them and return to life.
+
+Homeworld:
+Nobody remembers the exact name now. The only known history is that they wiped out all peaceful population of their homeworld, leaving only scientists and engineers to force them work on further military advancement. But shortly thereafter they eradicated these two castes as well, after discovering plot to release anti-nanobot virus in atmosphere by some scientists. After that they are wreaking havoc in universe, invading planets and destroying entire populations just because they can.
 '''
 
 SP_BANFORO
@@ -13089,6 +13120,9 @@ GREAT_DEFENSE_TROOPS_DESC
 ULTIMATE_DEFENSE_TROOPS_DESC
 +++	Ultimate Defensive Ground [[metertype METER_TROOPS]]: 300%
 
+GODLIKE_DEFENSE_TROOPS_DESC
++++++	Godlike Defensive Ground [[metertype METER_TROOPS]]: 2000%
+
 ANCIENT_DEFENSE_TROOPS_DESC
 +++	Ancient Defensive Ground [[metertype METER_TROOPS]]: 10 per population
 
@@ -13109,6 +13143,9 @@ GREAT_OFFENSE_TROOPS_DESC
 
 ULTIMATE_OFFENSE_TROOPS_DESC
 +++	Ultimate Offensive Ground [[metertype METER_TROOPS]]: 300%
+
+GODLIKE_OFFENSE_TROOPS_DESC
++++++	Godlike Offensive Ground [[metertype METER_TROOPS]]: 1000%
 
 BAD_DETECTION_DESC
 −	Bad [[metertype METER_DETECTION]]: −20 malus
@@ -13277,6 +13314,9 @@ Tidally Locked Rotation
 HOMEWORLD_LABEL
 Homeworld
 
+NECRI_POPULATION_LABEL
+Reproduction not the top priority
+
 # %1% FIXME
 # %2% FIXME
 BAD_POPULATION_LABEL
@@ -13381,6 +13421,11 @@ GREAT_TROOPS_LABEL
 # %2% FIXME
 ULTIMATE_TROOPS_LABEL
 %2% Ultimate Ground Troops
+
+# %1% FIXME
+# %2% FIXME
+GODLIKE_TROOPS_LABEL
+%2% Godlike Ground Troops
 
 INDEPENDENT_TROOP_LABEL
 Independent Homeworld

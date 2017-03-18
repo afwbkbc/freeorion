@@ -122,6 +122,19 @@ EffectsGroup
     [[AFTER_SPECIES_MULTIPLICATOR_TROOPS]]
 '''
 
+GODLIKE_DEFENSE_TROOPS
+'''[[BASIC_DEFENSE_TROOPS]]
+
+EffectsGroup
+            description = "GODLIKE_DEFENSE_TROOPS_DESC"
+            scope = Source
+            activation = Planet
+            priority = [[DEFAULT_PRIORITY]]
+            effects = SetMaxTroops value = Value * 20 accountinglabel = "GODLIKE_TROOPS_LABEL"
+
+    [[AFTER_SPECIES_MULTIPLICATOR_TROOPS]]
+'''
+
 PROTECTION_FOCUS_TROOPS
 '''EffectsGroup
             scope = Source
@@ -234,5 +247,24 @@ ULTIMATE_OFFENSE_TROOPS
             effects = [
                 SetCapacity partname = "GT_TROOP_POD"   value = (PartCapacity name = "GT_TROOP_POD") * 3
                 SetCapacity partname = "GT_TROOP_POD_2" value = (PartCapacity name = "GT_TROOP_POD_2") * 3
+            ]
+'''
+
+GODLIKE_OFFENSE_TROOPS
+'''EffectsGroup
+            description = "GODLIKE_OFFENSE_TROOPS_DESC"
+            scope = Source
+            activation = And [
+                Ship
+                Or [
+                    DesignHasPart name = "GT_TROOP_POD"
+                    DesignHasPart name = "GT_TROOP_POD_2"
+                ]
+            ]
+            stackinggroup = "GODLIKE_OFFENSIVE_TROOPS_STACK"
+            accountinglabel = "GODLIKE_OFFENSIVE_TROOPS_LABEL"
+            effects = [
+                SetCapacity partname = "GT_TROOP_POD"   value = (PartCapacity name = "GT_TROOP_POD") * 10
+                SetCapacity partname = "GT_TROOP_POD_2" value = (PartCapacity name = "GT_TROOP_POD_2") * 10
             ]
 '''

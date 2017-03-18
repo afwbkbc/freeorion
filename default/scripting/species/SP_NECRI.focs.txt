@@ -1,0 +1,51 @@
+Species
+    name = "SP_NECRI"
+    description = "SP_NECRI_DESC"
+    gameplay_description = "SP_NECRI_GAMEPLAY_DESC"
+    Native
+    CanProduceShips
+
+    tags = [ "UNDEAD" "NO_INDUSTRY" "NO_RESEARCH" "BAD_POPULATION" "AVERAGE_HAPPINESS" "GODLIKE_ATTACKTROOPS" "GODLIKE_DEFENSETROOPS" ]
+
+    foci = [
+		[[HAS_INDUSTRY_FOCUS]]
+        [[HAS_ADVANCED_FOCI]]
+    ]
+
+    preferredfocus = "FOCUS_PROTECTION"
+
+    effectsgroups = [
+        [[NO_INDUSTRY]]
+        [[NO_RESEARCH]]
+
+        // Max Population is fixed at 5
+        EffectsGroup
+            description = "FIXED_LOW_POPULATION_DESC"
+            scope = Source
+            activation = Planet
+            priority = 130
+            effects = [
+                SetTargetPopulation value = 5 accountinglabel = "NECRI_POPULATION_LABEL"
+            ]
+
+		[[ULTIMATE_WEAPONS]]
+		
+        [[BAD_POPULATION]]
+        [[AVERAGE_HAPPINESS]]
+		
+        [[AVERAGE_SUPPLY]]
+        [[GODLIKE_DEFENSE_TROOPS]]
+        [[GODLIKE_OFFENSE_TROOPS]]
+		
+		[[NATIVE_PLANETARY_DEFENSE]]
+		[[NATIVE_PLANETARY_SHIELDS]]
+        [[STANDARD_SHIP_SHIELDS]]
+    ]
+
+    [[BARREN_STANDARD_EP]]
+
+    graphic = "icons/species/necri.png"
+
+#include "common/*.macros"
+
+#include "/scripting/common/*.macros"
