@@ -1,0 +1,15 @@
+ShipDesign
+    name = "SM_CHARON"
+    description = "SM_CHARON_DESC"
+    hull = "SH_NANOROBOTIC"
+    parts = [
+        "SR_WEAPON_4_1"
+        "AR_XENTRONIUM_PLATE"
+        "SR_WEAPON_4_1"
+        "AR_XENTRONIUM_PLATE"
+        "SR_WEAPON_4_1"
+		"AR_XENTRONIUM_PLATE"
+		"SH_DEFLECTOR"
+    ]
+    icon = "icons/monsters/charon.png"
+    model = "seed"

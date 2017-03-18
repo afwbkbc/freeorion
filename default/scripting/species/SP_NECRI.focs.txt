@@ -2,13 +2,13 @@ Species
     name = "SP_NECRI"
     description = "SP_NECRI_DESC"
     gameplay_description = "SP_NECRI_GAMEPLAY_DESC"
+	//Playable
     Native
     CanProduceShips
 
     tags = [ "UNDEAD" "NO_INDUSTRY" "NO_RESEARCH" "BAD_POPULATION" "AVERAGE_HAPPINESS" "GODLIKE_ATTACKTROOPS" "GODLIKE_DEFENSETROOPS" ]
 
     foci = [
-		[[HAS_INDUSTRY_FOCUS]]
         [[HAS_ADVANCED_FOCI]]
     ]
 
@@ -18,7 +18,20 @@ Species
         [[NO_INDUSTRY]]
         [[NO_RESEARCH]]
 
-        // Max Population is fixed at 5
+        // Always start the game as High Tech natives with Fortress special
+        EffectsGroup
+            scope = And [
+                Source
+                Not HasSpecial name = "HIGH_TECH_NATIVES_SPECIAL" 
+            ]
+            activation = Turn high = 0
+            //stackinggroup = "GAME_START_MOD_STACK"
+            effects = [
+			    AddSpecial name = "HIGH_TECH_NATIVES_SPECIAL"
+                AddSpecial name = "FORTRESS_SPECIAL"
+            ]
+
+		// Max Population is fixed at 5
         EffectsGroup
             description = "FIXED_LOW_POPULATION_DESC"
             scope = Source
@@ -27,6 +40,15 @@ Species
             effects = [
                 SetTargetPopulation value = 5 accountinglabel = "NECRI_POPULATION_LABEL"
             ]
+			
+        // set population to max
+        EffectsGroup
+            scope = And [
+                Source
+                Planet
+            ]
+            activation = Turn high = 1
+            effects = SetPopulation value = Target.TargetPopulation			
 
 		[[ULTIMATE_WEAPONS]]
 		
@@ -40,6 +62,21 @@ Species
 		[[NATIVE_PLANETARY_DEFENSE]]
 		[[NATIVE_PLANETARY_SHIELDS]]
         [[STANDARD_SHIP_SHIELDS]]
+
+        EffectsGroup
+            scope = Source
+            activation = AND [
+                Planet
+                OR [
+                    Turn low = 1 high = 1
+                ]
+            ]
+            effects = CreateShip designname = "SM_CHARON" species = "SP_NECRI"
+            effects = CreateShip designname = "SM_CHARON" species = "SP_NECRI"
+            effects = CreateShip designname = "SM_CHARON" species = "SP_NECRI"
+            effects = CreateShip designname = "SM_CHARON" species = "SP_NECRI"
+			
+		
     ]
 
     [[BARREN_STANDARD_EP]]

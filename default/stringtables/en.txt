@@ -773,6 +773,12 @@ Acirema Guard Ship
 SM_ACIREMA_GUARD_DESC
 An unmanned armed ship built by the Acirema, standing guard over the system.
 
+SM_CHARON
+Charon
+
+SM_CHARON_DESC
+Ancient Necri flagship. As the name suggests, it's job is to carry the living to the land of the dead.
+
 SM_EXP_OUTPOST
 Experiment Zero
 
@@ -6954,6 +6960,7 @@ SP_NECRI_GAMEPLAY_DESC
 Prefer [[PT_BARREN]] planets.
 [[encyclopedia UNDEAD_SPECIES_TITLE]]
 [[encyclopedia XENOPHOBIC_SPECIES_TITLE]] (disgust for the weak)
+asdasd asd askdjasdsadsd
 '''
 
 SP_NECRI_DESC
