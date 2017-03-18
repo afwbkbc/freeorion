@@ -6953,7 +6953,7 @@ SP_NECRI_GAMEPLAY_DESC
 '''A caste of elite undead warriors, last remnants of once great and prospering civilization. Exist with endless combat training as top and only priority.
 Prefer [[PT_BARREN]] planets.
 [[encyclopedia UNDEAD_SPECIES_TITLE]]
-[[encyclopedia XENOPHOBIC_SPECIES_TITLE]]
+[[encyclopedia XENOPHOBIC_SPECIES_TITLE]] (disgust for the weak)
 '''
 
 SP_NECRI_DESC
@@ -6966,9 +6966,6 @@ Necri are free from biological dependencies and rely on nanorobotic blood to sta
 
 Social Structure:
 Necri do not reproduce by biological means. Both because they don't want to and because reproduction organs are typically removed anyway, to add space for something useful, such as portable ammunition generator or high-speed tissue nanofactory. Sometimes Necri create additional warriors artificially, by cloning or by taking ancient dead bodies from cryo chambers and infusing with nanobots that repair them and return to life.
-
-Homeworld:
-Nobody remembers the exact name now. The only known history is that they wiped out all peaceful population of their homeworld, leaving only scientists and engineers to force them work on further military advancement. But shortly thereafter they eradicated these two castes as well, after discovering plot to release anti-nanobot virus in atmosphere by some scientists. After that they are wreaking havoc in universe, invading planets and destroying entire populations just because they can.
 '''
 
 SP_BANFORO
